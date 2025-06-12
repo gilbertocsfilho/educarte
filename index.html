@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDUCARTE</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+      padding: 1rem;
+    }
+
+    .container-custom {
+      max-width: 1980px;
+      margin: auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero,
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .hero-text,
+    .section-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text button {
+      background: #111;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+    }
+
+    .section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .buttons button {
+      padding: 0.7rem 1.4rem;
+      font-size: 1rem;
+      border: none;
+      margin-right: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .buttons .outline {
+      background: transparent;
+      border: 2px solid #111;
+      color: #111;
+    }
+
+    .buttons .filled {
+      background: #111;
+      color: white;
+    }
+
+    footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .brand-logo {
+      color: #003f61;
+      font-weight: 700;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    /* New styles for Quem Somos section */
+    .about-section {
+      background-color: #f8f9fa;
+      padding: 3rem;
+      border-radius: 16px;
+      margin: 3rem 0;
+    }
+
+    .about-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .about-header h2 {
+      font-size: 2.5rem;
+      color: #003f61;
+      margin-bottom: 1rem;
+    }
+
+    .about-header p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-card h3 {
+      color: #003f61;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .about-card h3 i {
+      font-size: 1.8rem;
+    }
+
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-item i {
+      color: #003f61;
+      font-size: 1.2rem;
+      margin-top: 0.2rem;
+    }
+
+    .team-section {
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .team-section h2 {
+      color: #003f61;
+      margin-bottom: 2rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .team-card i {
+      font-size: 2.5rem;
+      color: #003f61;
+      margin-bottom: 1rem;
+    }
+
+    .motto {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #003f61;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 1.5rem;
+      }
+      
+      .about-header h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-custom">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand brand-logo" href="#">🎨 EDUCARTE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#quem-somos">Sobre</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Transforme sua paixão pela arte em ensino de excelência</h2>
+        <p>Desenvolva suas habilidades pedagógicas com nossos cursos especializados e recursos abrangentes. <br />
+          A arte é essencial, e seu ensino precisa ser fortalecido, aqui teoria e práticas andam juntas.
+        </p>
+        <button onclick="window.location.href='login.html'">Login</button>
+      </div>
+      <div class="hero-img">
+        <img src="img/illustration.png" alt="Ilustração de ensino de arte" />
+      </div>
+    </section>
+
+    <hr class="my-4" />
+
+    <!-- Section -->
+    <section class="section">
+      <div class="hero-img">
+        <img src="img/objetivo.png" alt="Objetivo Educacional" style="max-width: 400px; border-radius: 12px;" />
+      </div>
+      
+      <div class="section-text">
+        <h3 style="font-weight: bold;">Nosso Objetivo</h3>
+        <p>
+          A missão da <strong>Educarte</strong> é apoiar a <em>formação continuada de professores de Artes</em> com foco em práticas pedagógicas significativas. Nossos principais pilares:
+        </p>
+        <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+          <li>🎯 <strong>Aprofundamento teórico e prático</strong> no ensino da arte na educação infantil e anos iniciais.</li>
+          <li>🎨 <strong>Exploração das linguagens artísticas</strong> conforme a BNCC.</li>
+          <li>💡 <strong>Promoção da criatividade</strong> com práticas pedagógicas reflexivas e inovadoras.</li>
+          <li>🌐 <strong>Valorização da arte</strong> como manifestação cultural e social.</li>
+          <li>🤝 <strong>Integração de abordagens inclusivas e tecnológicas</strong> com foco na expressão e fruição estética.</li>
+        </ul>
+        <div class="buttons d-flex flex-wrap mt-3">
+          <button class="outline">Explorar Cursos</button>
+          <button class="filled">Comece Agora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quem Somos Section -->
+    <section id="quem-somos" class="about-section">
+      <div class="about-header">
+        <h2><i class="fas fa-heart"></i> Quem Somos</h2>
+        <p>Conheça nossa história, missão e valores que nos movem para transformar o ensino de Artes</p>
+      </div>
+
+      <div class="about-card">
+        <h3><i class="fas fa-history"></i> Nossa História</h3>
+        <p>Somos um grupo de estudantes do curso de Pedagogia da Universidade Católica de Pernambuco (UNICAP) que, ao longo da nossa formação, identificamos uma lacuna recorrente na realidade escolar: a dificuldade de muitos professores em trabalhar Artes de forma significativa, por conta da ausência de suporte teórico e prático adequado.</p>
+        <p>Essa iniciativa nasceu em sala de aula como parte de um projeto de extensão acadêmico, mas cresceu impulsionado pelo nosso desejo real de fazer a diferença na educação. A partir de estudos, vivências em sala, estágios e conversas com docentes e com estudantes que expunham suas dificuldades em compreender e valorizar o ensino de artes nas instituições de ensino, decidimos criar este site como um espaço colaborativo e acessível, que conecta teoria, prática, criatividade, experiências e dicas.</p>
+        <p>Este é um projeto em construção, que reflete o nosso crescimento como futuros educadores e o nosso compromisso com uma pedagogia mais humana, inclusiva e sensível.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="about-card h-100">
+            <h3><i class="fas fa-bullseye"></i> Missão</h3>
+            <p>Contribuir para a valorização do ensino de Artes, oferecendo recursos acessíveis, teóricos e práticos, que fortaleçam a prática docente e estimulem a expressão criativa nas escolas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="about-card h-100">
+            <h3><i class="fas fa-eye"></i> Visão</h3>
+            <p>Ser um apoio diferencial à formação docente em Artes, promovendo uma educação mais sensível, criativa e transformadora, especialmente nos espaços que mais precisam.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="about-card h-100">
+            <h3><i class="fas fa-star"></i> Valores</h3>
+            <div class="value-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Compromisso com a educação pública e democrática</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Criatividade como ferramenta de transformação</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Acolhimento e escuta ativa dos educadores</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Respeito às diversidades culturais e expressivas</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Colaboração entre os docentes, sensibilidade e ética</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h3><i class="fas fa-users"></i> Nossa Equipe</h3>
+        <p>Somos estudantes entusiasmados pela educação e por aquilo que a Arte pode despertar em cada ser humano. Acreditamos que, mesmo sem especialização formal, todo professor pode ser mediador de experiências artísticas significativas, basta ter acesso, apoio e inspiração.</p>
+        
+        <div class="team-grid">
+          <div class="team-card">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Inovação</h4>
+            <p>Criado por futuros pedagogos, com base em experiências reais vivenciadas em sala de aula, estágio e formação.</p>
+          </div>
+          <div class="team-card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h4>Praticidade</h4>
+            <p>Conteúdo pensado para quem está na sala de aula e precisa de apoio imediato.</p>
+          </div>
+          <div class="team-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h4>Acessibilidade</h4>
+            <p>Foco em alternativas de baixo custo, adaptadas à realidade das escolas públicas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h3><i class="fas fa-comments"></i> Conexão com você</h3>
+        <p>Sabemos que ser professor é desafiador, e mais ainda quando nos faltam ferramentas. Criamos este espaço com muito carinho, porque acreditamos no poder da troca, do apoio mútuo e da invenção coletiva. Esperamos que você se sinta acolhido(a), representado(a) e, acima de tudo, inspirado(a) a continuar fazendo Arte com seus alunos, mesmo com poucos recursos.</p>
+      </div>
+
+      <div class="motto">
+        <i class="fas fa-quote-left"></i> Com sensibilidade, tudo se transforma. <i class="fas fa-quote-right"></i>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Perguntas Frequentes</a>
+      </div>
+      <div>
+        © 2025 EDUCARTE
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>
