@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       mapa: "components/mapa-cultural.html",
       recursos_teoricos: "components/recursos_teoricos.html",
       recursos_praticos: "components/recursos_praticos.html",
-      biblioteca: "components/biblioteca.html"
+      biblioteca: "components/biblioteca.html",
+      reflexoes: "components/reflexoes.html"
     };
     if (map[sectionId]) {
       await loadComponent("main-content", map[sectionId]);
