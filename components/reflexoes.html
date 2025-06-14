@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDUCARTE - Isso é Arte?</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --educarte-primary: #0c3f50;
+      --educarte-secondary: #f8f9fa;
+      --educarte-accent: #4a90e2;
+    }
+
+    body {
+      background-color: white;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    .header {
+      background-color: white;
+      border-bottom: 1px solid #eaeaea;
+      padding: 18px 0;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      color: var(--educarte-primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      margin-bottom: 0;
+      font-size: 1.08rem;
+      color: #666;
+    }
+
+    .content-card {
+      border-radius: 12px;
+      border: 1px solid #eaeaea;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+      background-color: white;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .art-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 2rem 0;
+    }
+
+    .art-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .art-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .art-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .art-card:hover .art-image {
+      transform: scale(1.03);
+    }
+
+    .image-caption {
+      padding: 12px;
+      background: white;
+    }
+
+    .image-source {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .image-source a {
+      color: var(--educarte-primary);
+      text-decoration: none;
+    }
+
+    .image-source a:hover {
+      text-decoration: underline;
+    }
+
+    .quote {
+      border-left: 4px solid var(--educarte-primary);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      background-color: rgba(12, 63, 80, 0.03);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .quote-author {
+      text-align: right;
+      font-weight: 500;
+      color: var(--educarte-primary);
+      margin-top: 0.5rem;
+    }
+
+    .reflection-section {
+      background-color: rgba(12, 63, 80, 0.05);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2.5rem 0;
+      border-left: 4px solid var(--educarte-primary);
+    }
+
+    .reflection-title {
+      color: var(--educarte-primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .container-custom {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .header-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 12px 0;
+      }
+      
+      .header h1 {
+        font-size: 1.7rem;
+      }
+      
+      .art-gallery {
+        grid-template-columns: 1fr;
+      }
+      
+      .content-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="header">
+    <div class="container-custom">
+      <div class="header-content">
+        <h1><i class="fas fa-palette me-2"></i> Isso é Arte?</h1>
+        <p>Explorando a arte na formação humana e docente</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container-custom">
+    <div class="content-card">
+      <h2 class="text-center mb-4" style="color: var(--educarte-primary);">A arte está em toda parte</h2>
+      
+      <div class="art-gallery">
+        <!-- Imagem 1 -->
+        <div class="art-card">
+          <img src="https://th.bing.com/th/id/OIP.CyxWQ21JbMndmFO_s3VAMwHaFj?rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" alt="Arte visual" class="art-image">
+          <div class="image-caption">
+            <div class="image-source">
+              Fonte: <a href="https://www.bing.com/images/search?view=detailV2&ccid=CyxWQ21J&id=5BF0BEE12DFBF0A704BEF37F7B065CDFFE13F145&thid=OIP.CyxWQ21JbMndmFO_s3VAMwHaFj&mediaurl=https%3A%2F%2Fwww.yaconic.com%2Fwp-content%2Fuploads%2F2019%2F11%2FTRABAJOS-092.jpg" target="_blank">Arte visual</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagem 2 -->
+        <div class="art-card">
+          <img  src="https://1.bp.blogspot.com/-xTJMnIEgnM8/TcQaG_kHqdI/AAAAAAAAEpw/G0TlEWSFyHc/s1600/DSCF3624.JPG" alt="Autorretrato Infantil" class="art-image">
+          <div class="image-caption">
+            <div class="image-source">
+              Fonte: <a href="https://www.bing.com/images/search?view=detailV2&ccid=9i%2BnI9aP&id=694EFDF3652A3C9AA706FF86516210F9964037E1&thid=OIP.9i-nI9aPcU76S97qx1vxggHaFj&mediaurl=https%3A%2F%2F1.bp.blogspot.com%2F-xTJMnIEgnM8%2FTcQaG_kHqdI%2FAAAAAAAAEpw%2FG0TlEWSFyHc%2Fs1600%2FDSCF3624.JPG" target="_blank">Autorretrato Infantil</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagem 3 -->
+        <div class="art-card">
+          <img style="object-position: 50% 30%; width: 65%; height: 70%;" src="https://2.bp.blogspot.com/--dCqYVwlQ-s/T2OQ9ZKzsxI/AAAAAAAADyI/utDAz-pTXKc/s1600/2012-03-15%2017.18.58.jpg" alt="Autorretrato educação infantil" class="art-image">
+          <div class="image-caption">
+            <div class="image-source">
+              Fonte: <a href="https://www.bing.com/images/search?view=detailV2&ccid=6U5CgYzc&id=89970C3BB8B0FF5BFBCF56C4962CFDAB44CE9DDC&thid=OIP.6U5CgYzc2kcdldKC5F0t7gHaKd&mediaurl=https%3A%2F%2F2.bp.blogspot.com%2F--dCqYVwlQ-s%2FT2OQ9ZKzsxI%2FAAAAAAAADyI%2FutDAz-pTXKc%2Fs1600%2F2012-03-15%2B17.18.58.jpg" target="_blank">Autorretrato educação infantil</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagem 4 -->
+        <div class="art-card">
+          <img src="https://cdn.culturagenial.com/imagens/grupocorpo-danca-cke.jpg" alt="Dança" class="art-image">
+          <div class="image-caption">
+            <div class="image-source">
+              Fonte: <a href="https://www.bing.com/images/search?view=detailV2&ccid=iPaLf9OR&id=07E052E8A5AFA97F73D0E01D2038074D29D94628&thid=OIP.iPaLf9ORd0QATBukUWsZcgHaE7&mediaurl=https%3a%2f%2fcdn.culturagenial.com%2fimagens%2fgrupocorpo-danca-cke.jpg" target="_blank">Dança</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagem 5 -->
+        <div class="art-card">
+          <img src="https://matriculas.estacio.br/blog/wp-content/uploads/2019/12/faculdade-de-teatro.jpg" alt="Teatro" class="art-image">
+          <div class="image-caption">
+            <div class="image-source">
+              Fonte: <a href="https://www.bing.com/images/search?view=detailV2&ccid=XDhz2TVV&id=1FC606560A1232F52595738B4BF1453B1D0D2ECC&thid=OIP.XDhz2TVVOg7kmp0YoBFRLQHaE8&mediaurl=https%3A%2F%2Fmatriculas.estacio.br%2Fblog%2Fwp-content%2Fuploads%2F2019%2F12%2Ffaculdade-de-teatro.jpg" target="_blank">Teatro</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagem 6 -->
+        <div class="art-card">
+          <img src="https://sme.goiania.go.gov.br/conexaoescola/wp-content/uploads/2022/04/20220409_170926-scaled-e1649636373961-768x585.jpg" alt="Arte com natureza" class="art-image">
+          <div class="image-caption">
+            <div class="image-source">
+              Fonte: <a href="https://www.bing.com/images/search?view=detailV2&ccid=K5dGtrLf&id=3E85E7A617E3F4584127D12D7D76C0855DC23D9F&thid=OIP.K5dGtrLfnaD-eUtLOFYH8QHaFp&mediaurl=https%3A%2F%2Fsme.goiania.go.gov.br%2Fconexaoescola%2Fwp-content%2Fuploads%2F2022%2F04%2F20220409_170926-scaled-e1649636373961-768x585.jpg" target="_blank">Arte com natureza</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color: var(--educarte-primary);">A arte é parte essencial da formação humana - mas onde ela está na formação dos professores? Afinal, o que é arte?</h3>
+      
+      <p>A arte está por toda parte: nas músicas que ouvimos, nas danças, nas pinturas, nos desenhos feitos pelas crianças e até nas histórias que contamos e vivemos. Mas afinal, como saber o que realmente é arte?</p>
+      
+      <p>Algumas pessoas dizem que é difícil definir arte, porque ela pode se manifestar de muitas formas diferentes. Como comparar, por exemplo, uma música clássica como o Réquiem de Mozart com uma obra moderna como o Quarteto do Helicóptero? Ou uma pintura famosa da Capela Sistina com as caixas de supermercado usadas como arte por Andy Warhol?</p>
+      
+      <div class="quote">
+        "A obra de arte é uma expressão organizada da experiência humana."
+        <div class="quote-author">John Dewey, em "Arte como Experiência"</div>
+      </div>
+      
+      <p>Para o filósofo e educador John Dewey, a arte está diretamente ligada à vida e à experiência humana. Ou seja, a arte não precisa estar em museus ou ser grandiosa - ela pode estar no cotidiano, nos sons, nas cores, nos sentimentos e nos gestos simples. Segundo Dewey, arte e educação caminham juntas, pois ambas envolvem imaginação, sensibilidade e criatividade.</p>
+      
+      <div class="reflection-section">
+        <h4 class="reflection-title"><i class="fas fa-lightbulb me-2"></i> Reflexão para a prática docente</h4>
+        <p>Como educadores(as), estamos cercados de arte o tempo todo. Ela aparece nos rabiscos das crianças, nas danças durante a recreação, nas músicas de roda, nas colagens feitas com afeto.</p>
+        <p>Mas será que reconhecemos o valor artístico dessas expressões simples?</p>
+        <p>Será que acolhemos e incentivamos essas manifestações criativas dentro da escola?</p>
+        <p>É fundamental lembrar que a arte nasce do sentimento, da intenção, da vivência. E que ela tem valor, mesmo quando é simples ou espontânea - talvez principalmente nesses momentos.</p>
+        <p>Nossa missão como docentes é abrir espaço para que a arte esteja viva no ambiente escolar - como forma de expressão, de identidade, de aprendizagem e de encantamento com o mundo.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
