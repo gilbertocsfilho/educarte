@@ -1,13 +1,57 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-custom bg-white">
+<nav class="navbar navbar-expand-md navbar-light navbar-custom">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="#" onclick="window.showSection('home'); return false;" style="color: #0c3f50;">
-      <i class="fas fa-palette me-2" style="color: #0c3f50;"></i>EDUCARTE
+    <a class="navbar-brand fw-bold" href="#" onclick="window.showSection('home'); return false;" style="color: #118AB2;">
+      <i class="fas fa-palette me-2" style="color: #118AB2;"></i>EDUCARTE
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="window.showSection('sobre'); return false;">Logoff</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+<style>
+  .navbar-custom {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .navbar-custom .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0 0.2rem;
+  }
+  
+  .navbar-custom .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #118AB2;
+  }
+  
+  .navbar-custom .navbar-brand {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+</style>
 
 <!-- Font Awesome para o ícone -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
